@@ -1,10 +1,10 @@
-package org.buzheng.demo.dao.mybatis;
+package org.buzheng.demo.dao;
 
 import java.util.List;
 
 import org.buzheng.demo.domain.User;
 
-public interface UserService {
+public interface UserMapper {
 	
 	public void saveUser(User user);
 	public void updateUser(User user);

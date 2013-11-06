@@ -3,8 +3,10 @@ package org.buzheng.demo.web.controller;
 import java.util.List;
 import java.util.UUID;
 
-import org.buzheng.demo.dao.mybatis.UserService;
+import javax.annotation.Resource;
+
 import org.buzheng.demo.domain.User;
+import org.buzheng.demo.service.UserService;
 import org.buzheng.demo.web.validator.RegistrationValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,12 +22,9 @@ import org.springframework.web.servlet.ModelAndView;
 public class RegistrationController {
 	
 	private RegistrationValidator validator = null;
+	
+	@Resource
 	private UserService userService = null;
-		
-	@Autowired
-	public void setUserService(UserService userService) {
-		this.userService = userService;
-	}
 
 	public RegistrationValidator getValidator() {
 		return validator;
